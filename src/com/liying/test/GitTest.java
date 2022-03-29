@@ -7,5 +7,7 @@ package com.liying.test;
 public class GitTest {
     public static void main(String[] args) {
         System.out.println("nihao git!");
+
+        System.out.println("做了修改");
     }
 }
