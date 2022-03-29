@@ -9,5 +9,7 @@ public class GitTest {
         System.out.println("nihao git!");
 
         System.out.println("做了修改");
+
+        System.out.println("hello git");
     }
 }
