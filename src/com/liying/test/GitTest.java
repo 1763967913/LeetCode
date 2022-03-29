@@ -11,5 +11,7 @@ public class GitTest {
         System.out.println("做了修改");
 
         System.out.println("hello git");
+
+        System.out.println("push success");
     }
 }
