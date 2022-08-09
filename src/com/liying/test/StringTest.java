@@ -20,6 +20,8 @@ public class StringTest {
         array['c'] = 0;
         System.out.println('c' - 97);
 
+        StringBuilder sb = new StringBuilder();
+
         int number = 68;
         char chart = (char)number;
         System.out.println("number = " + number);

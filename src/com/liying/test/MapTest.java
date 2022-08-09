@@ -11,6 +11,6 @@ public class MapTest {
     public static void main(String[] args) {
         Map<Integer,Integer> freq = new HashMap<>();
         System.out.println(freq.getOrDefault(1, 0));
-        freq.
+        freq.entrySet();
     }
 }
