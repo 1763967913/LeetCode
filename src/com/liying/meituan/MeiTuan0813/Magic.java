@@ -1,4 +1,4 @@
-package com.liying.MeiTuan;
+package com.liying.meituan.MeiTuan0813;
 
 import java.util.Arrays;
 import java.util.Scanner;

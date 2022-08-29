@@ -8,7 +8,9 @@ public class StringTest {
 
     public static void main(String[] args) {
 //        String s1 = new String("a") + new String("b");
-//        String s2 = "ab";
+//        String s2 = "abccba";
+//        System.out.println(s2.substring(0, 6));
+
 //        String s3 = s1.intern();
 //        System.out.println(s1.hashCode() == s2.hashCode());
 //        System.out.println(s1 == s3);
@@ -21,6 +23,7 @@ public class StringTest {
         System.out.println('c' - 97);
 
         StringBuilder sb = new StringBuilder();
+        sb.deleteCharAt(1);
 
         int number = 68;
         char chart = (char)number;

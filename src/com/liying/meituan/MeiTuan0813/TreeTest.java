@@ -1,32 +1,30 @@
 package com.liying.meituan.MeiTuan0813;
 
-import javax.swing.tree.TreeNode;
-import java.util.LinkedList;
-import java.util.PriorityQueue;
-import java.util.Queue;
-import java.util.Scanner;
+import java.util.*;
 
-public class TreeTest {
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int[] nodes = new int[n];
-        for (int i = 0; i < n; i++){
-            nodes[i] = sc.nextInt();
+public class TreeTest{
+    public static void main(String args[]) {
+        Scanner cin = new Scanner(System.in);
+        int n =  Integer.parseInt(cin.nextLine());
+        String[] _nums = cin.nextLine().split(" ");
+        int[] nums = new int[n + 1];
+        for (int i = 1; i <= n; i++) nums[i] = Integer.parseInt(_nums[i - 1]);
+        int ans = 0;
+        Queue<Integer> q = new ArrayDeque<>();
+        q.offer(1);
+        while (!q.isEmpty()) {
+            int t = q.poll();
+            ans = Math.max(ans, nums[t]);
+            if (2 * t <= n){
+                nums[2 * t] += nums[t];
+                q.offer(2 * t);
+            }
+            if (2 * t + 1 <= n) {
+                nums[2 * t + 1] += nums[t];
+                q.offer(2 * t + 1);
+            }
         }
-        int max = getMax(nodes,0);
-        System.out.println(max);
-
-    }
-
-    static int getMax(int[] nodes, int start){
-        int res = Integer.MIN_VALUE;
-        if (start >= nodes.length){
-            return res;
-        }
-        res = Math.max(getMax(nodes,2 * start),getMax(nodes,2 * start + 1));
-        return res + nodes[start];
+        System.out.println(ans);
     }
 }
 
